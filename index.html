@@ -40,6 +40,14 @@
 	justify-content: flex-start;
 	align-items: center;
 }
+.heroImage {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	z-index: -1;
+}
 .hero p { margin: 0; }
 .hero .heroLarge {
 	color: #232323;
@@ -117,6 +125,10 @@ h2 {
 	}
 	.email { margin-bottom: 20px; width: 100%; box-sizing: border-box;} 
 }
+@media screen and (max-width: 900px)
+{
+	.heroImage { display: none; }
+}
 		-->
 	</style>
 </head>
@@ -130,6 +142,7 @@ h2 {
 		<div class="container">
 			<div class="hero">
 				<div class="heroContent">
+					<img src="background.svg" alt="" class="heroImage">
 					<p class="heroLarge">We built a Property Management System tailored for the Serviced Apartment Industry.</p>
 					<p class="heroSmall">We were fed up with trying to make a hotel PMS work for our serviced apartment company, so we decided to build a new one specifically designed for the day to day running of serviced apartments.</p>
 
